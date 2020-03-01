@@ -34,7 +34,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 		<!-- Release: @{project.version} -->
 		@{parsedVersion.majorVersion}.@{parsedVersion.minorVersion}.@{parsedVersion.incrementalVersion}
 	</tlib-version>
-	<short-name>aowr</short-name>
+	<short-name>wr</short-name>
 	<uri>@{project.url}</uri>
 	<!-- TODO: Tags -->
 	<!-- TODO: Functions -->
