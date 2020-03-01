@@ -24,7 +24,7 @@
 	</a>
 </p>
 
-Web resource management in a JSP environment..
+Web resource management in a JSP environment.
 
 ## Project Links
 * [Project Home](https://aoindustries.com/ao-web-resources/taglib/)
