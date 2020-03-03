@@ -36,6 +36,88 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 	</tlib-version>
 	<short-name>wr</short-name>
 	<uri>@{project.url}</uri>
-	<!-- TODO: Tags -->
-	<!-- TODO: Functions -->
+	<!-- TODO: group tag (nestable in style, styles, script, scripts) -->
+	<!-- TODO: configure group-includes (add/remove) via tags? -->
+	<!-- TODO: style tag (with group, with scope, allowing multiple like set both application and request) -->
+	<!-- TODO: order(ing?) tag (adds ordering for all nested styles, in order) (add styles here, too?) -->
+	<!-- TODO: after tag, nestable in style or script -->
+	<!-- TODO: before tag, nestable in style or script -->
+	<!-- TODO: script tag (with group, with scope) -->
+	<!-- TODO: scripts tag -->
+	<!-- TODO: removeScript, removeStyle, removeOrder(ing?) -->
+	<tag>
+		<!-- datePublished="2020-03-03T14:05:05-0600" -->
+		<!-- TODO: Add relevant links to this description: -->
+		<description><![CDATA[
+			<p class="semanticcms-tag-reference-summary">
+				Renders the <code>&lt;link&gt;</code> tags for the currently active styles.
+			</p>
+			<p>
+				All styles are obtained from the selected groups on both the
+				request and session style registries.  The request styles
+				default to the central application-scope registry.  Thus,
+				without modification during the request, the centrally
+				registered styles are used.
+			</p>
+			<p>
+				The styles are filtered for the current request.  This filtering
+				is currently limited to selection matching the style direction
+				to the text direction of the current response locale.
+			</p>
+			<p>
+				All of the selected styles are then sorted.  First with a
+				default ordering selected to cover the most common cases of
+				styles overriding other styles.  Second, a stable topological
+				sort is performed to resolve all the ordering constraints.
+			</p>
+			<p>
+				The body is invoked with any output discarded.  This is to allow
+				nested <a href="@{project.url}ao-web-resources.tld/tag-group">&lt;wr:group&gt;</a>
+				tags.
+			</p>
+		]]></description>
+		<name>styles</name>
+		<tag-class>com.aoindustries.web.resources.taglib.StylesTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					By default, all global styles are included.
+				</p>
+			]]></description>
+			<name>global</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					The comma and/or space-separated set of groups to include.
+					This is in addition to the global group when <code>global="true"</code> (the default).
+				</p>
+				<p>
+					TODO: Nested <a href="@{project.url}ao-web-resources.tld/tag-group">&lt;wr:group&gt;</a>
+					tags will add to the set of groups.
+				</p>
+			]]></description>
+			<name>groups</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					The indentation applied between generated links, after a
+					newline and before the next link.  This identation is
+					not applied before the first link.
+				</p>
+			]]></description>
+			<name>indent</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
 </taglib>
