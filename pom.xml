@@ -41,7 +41,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 / <a target="_top" href="${project.url}">${shortTitle}</a>]]></javadoc.breadcrumbs>
 		<shortTitle>Taglib</shortTitle>
 		<javadoc.taglibReference><![CDATA[
-			<li><a target="_top" href="${project.url}ao-web-resources.tld/">AO Web Resources Taglib Reference</a></li>
+			<li><a target="_top" href="${project.url}ao-web-resources.tld/">Taglib Reference</a></li>
 		]]></javadoc.taglibReference>
 	</properties>
 
