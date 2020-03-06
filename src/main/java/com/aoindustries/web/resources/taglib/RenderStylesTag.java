@@ -41,7 +41,7 @@ import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.JspFragment;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
-public class StylesTag extends SimpleTagSupport {
+public class RenderStylesTag extends SimpleTagSupport {
 
 	private String indent;
 	public void setIndent(String indent) {

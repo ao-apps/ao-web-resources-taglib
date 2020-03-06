@@ -74,9 +74,8 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 				tags.
 			</p>
 		]]></description>
-		<!-- TODO: Rename "renderStyles" or "doStyles"?  Might help JSP code assist versus <wr:style> -->
-		<name>styles</name>
-		<tag-class>com.aoindustries.web.resources.taglib.StylesTag</tag-class>
+		<name>renderStyles</name>
+		<tag-class>com.aoindustries.web.resources.taglib.RenderStylesTag</tag-class>
 		<body-content>scriptless</body-content>
 		<attribute>
 			<description><![CDATA[
