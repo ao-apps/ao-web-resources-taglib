@@ -47,22 +47,19 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 	<!-- TODO: removeScript, removeStyle, removeOrder(ing?) -->
 	<tag>
 		<!-- datePublished="2020-03-03T14:05:05-0600" -->
+		<!-- dateModified="2020-03-05T19:27:22-0600" -->
 		<!-- TODO: Add relevant links to this description: -->
 		<description><![CDATA[
 			<p class="semanticcms-tag-reference-summary">
 				Renders the <code>&lt;link&gt;</code> tags for the currently active styles.
 			</p>
 			<p>
-				All styles are obtained from the selected groups on both the
-				request and session style registries.  The request styles
-				default to the central application-scope registry.  Thus,
-				without modification during the request, the centrally
-				registered styles are used.
+				All styles are obtained from all activated groups on all selected
+				registries.
 			</p>
 			<p>
 				The styles are filtered for the current request.  This filtering
-				is currently limited to selection matching the style direction
-				to the text direction of the current response locale.
+				is currently limited to the style direction matched to response locale.
 			</p>
 			<p>
 				All of the selected styles are then sorted.  First with a
@@ -72,40 +69,15 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 			</p>
 			<p>
 				The body is invoked with any output discarded.  This is to allow
-				nested <a href="@{project.url}ao-web-resources.tld/tag-group">&lt;wr:group&gt;</a>
+				nested <a href="@{project.url}ao-web-resources.tld/tag-activate">&lt;wr:activate&gt;</a>
+				and <a href="@{project.url}ao-web-resources.tld/tag-deactivate">&lt;wr:deactivate&gt;</a>
 				tags.
 			</p>
 		]]></description>
+		<!-- TODO: Rename "renderStyles" or "doStyles"?  Might help JSP code assist versus <wr:style> -->
 		<name>styles</name>
 		<tag-class>com.aoindustries.web.resources.taglib.StylesTag</tag-class>
 		<body-content>scriptless</body-content>
-		<attribute>
-			<description><![CDATA[
-				<p>
-					By default, all global styles are included.
-				</p>
-			]]></description>
-			<name>global</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-			<type>boolean</type>
-		</attribute>
-		<attribute>
-			<description><![CDATA[
-				<p>
-					The comma and/or space-separated set of groups to include.
-					This is in addition to the global group when <code>global="true"</code> (the default).
-				</p>
-				<p>
-					TODO: Nested <a href="@{project.url}ao-web-resources.tld/tag-group">&lt;wr:group&gt;</a>
-					tags will add to the set of groups.
-				</p>
-			]]></description>
-			<name>groups</name>
-			<required>false</required>
-			<rtexprvalue>false</rtexprvalue>
-			<type>java.lang.String</type>
-		</attribute>
 		<attribute>
 			<description><![CDATA[
 				<p>
@@ -119,5 +91,135 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 			<rtexprvalue>false</rtexprvalue>
 			<type>java.lang.String</type>
 		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					Enables the application-scope registry
+					(defaults to <code>false</code>).
+				</p>
+				<p>
+					By default, the application-scope activations and styles
+					<strong>are not included</strong>.  This is because the
+					application-scope registry is copied to the request, thus
+					without modification during the request, the centrally
+					registered styles are used.
+				</p>
+			]]></description>
+			<name>application</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					Enables the session-scope registry, when present
+					(defaults to <code>true</code>).
+				</p>
+				<p>
+					If missing, the session will not be created.
+				</p>
+				<p>
+					Session-scope activations are applied after any selected
+					application-scope.
+				</p>
+			]]></description>
+			<name>session</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					Enables the request-scope registry
+					(defaults to <code>true</code>).
+				</p>
+				<p>
+					The application-scope registry is copied to the request,
+					thus without modification during the request, the centrally
+					registered styles and activations are used.
+				</p>
+				<p>
+					Request-scope activations are applied after any selected
+					application-scope and session-scope.
+				</p>
+			]]></description>
+			<name>request</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					Enables the page-scope registry, when present
+					(defaults to <code>true</code>).
+				</p>
+				<p>
+					Page-scope activations are applied after any selected
+					application-scope, session-scope, and request-scope.
+				</p>
+			]]></description>
+			<name>page</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					Enables the use of registry activation settings
+					(defaults to <code>true</code>).
+				</p>
+			]]></description>
+			<name>registered</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					The comma and/or space-separated set of groups to activate.
+					This is in addition to the registry-activated groups when <code>registered="true"</code> (the default).
+				</p>
+				<p>
+					When a group is both activated and deactivate, via these attributes,
+					the activation takes precedence.
+				</p>
+				<p>
+					Nested <a href="@{project.url}ao-web-resources.tld/tag-activate">&lt;wr:activate&gt;</a>
+					and <a href="@{project.url}ao-web-resources.tld/tag-deactivate">&lt;wr:deactivate&gt;</a>
+					tags will further refine the activations.
+				</p>
+			]]></description>
+			<name>activate</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[
+				<p>
+					The comma and/or space-separated set of groups to deactivate.
+					This is in addition to the registry-deactivated groups when <code>registered="true"</code> (the default).
+				</p>
+				<p>
+					When a group is both activated and deactivate, via these attributes,
+					the activation takes precedence.
+				</p>
+				<p>
+					Nested <a href="@{project.url}ao-web-resources.tld/tag-activate">&lt;wr:activate&gt;</a>
+					and <a href="@{project.url}ao-web-resources.tld/tag-deactivate">&lt;wr:deactivate&gt;</a>
+					tags will further refine the activations.
+				</p>
+			]]></description>
+			<name>deactivate</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
 	</tag>
+	<!-- TODO: Add <wr:activate> and <wr:deactivate> tags, which apply to nesting or defined scope -->
 </taglib>
