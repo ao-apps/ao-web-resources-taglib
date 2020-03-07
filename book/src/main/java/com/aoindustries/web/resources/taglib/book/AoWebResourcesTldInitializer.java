@@ -38,7 +38,7 @@ public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 			Maven.properties.getProperty("javac.link.javaeeApi.6"),
 			// TODO: Have a "development" mode (via META-INF/context.xml) that fails on package not found
 			// TODO: Review if any other classes needed
-			Collections.singletonMap("com.aoindustries.web.resources.taglib.", Maven.properties.getProperty("documented.url") + "apidocs/")
+			Collections.singletonMap("com.aoindustries.web.resources.taglib.", Maven.properties.getProperty("project.url") + "apidocs/")
 		);
 	}
 }
