@@ -34,8 +34,8 @@ public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 			"Taglib Reference",
 			"/ao-web-resources/taglib",
 			"/ao-web-resources.tld",
-			Maven.properties.getProperty("documented.javac.link.javaApi"),
-			Maven.properties.getProperty("javac.link.javaeeApi.6"),
+			Maven.properties.getProperty("documented.javadoc.link.javase"),
+			Maven.properties.getProperty("javadoc.link.javaee.6"),
 			// TODO: Have a "development" mode (via META-INF/context.xml) that fails on package not found
 			// TODO: Review if any other classes needed
 			Collections.singletonMap("com.aoindustries.web.resources.taglib.", Maven.properties.getProperty("project.url") + "apidocs/")
