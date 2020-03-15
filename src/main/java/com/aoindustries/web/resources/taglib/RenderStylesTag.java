@@ -24,7 +24,7 @@ package com.aoindustries.web.resources.taglib;
 
 import com.aoindustries.html.servlet.HtmlEE;
 import com.aoindustries.io.NullWriter;
-import com.aoindustries.util.StringUtility;
+import com.aoindustries.lang.Strings;
 import com.aoindustries.web.resources.registry.Group;
 import com.aoindustries.web.resources.renderer.Renderer;
 import com.aoindustries.web.resources.servlet.RegistryEE;
@@ -45,7 +45,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 
 	private String indent;
 	public void setIndent(String indent) {
-		this.indent = StringUtility.nullIfEmpty(indent);
+		this.indent = Strings.nullIfEmpty(indent);
 	}
 
 	private boolean application = false;
@@ -79,7 +79,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 			this.activate = null;
 		} else {
 			Set<Group.Name> newActivates = new HashSet<>();
-			for(String name : StringUtility.splitStringCommaSpace(activate)) {
+			for(String name : Strings.splitStringCommaSpace(activate)) {
 				Group.Name group = new Group.Name(name);
 				// Activations take priority over deactivate when set in both attributes
 				if(deactivate != null) {
@@ -102,7 +102,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 			this.deactivate = null;
 		} else {
 			Set<Group.Name> newDeactivates = new HashSet<>();
-			for(String name : StringUtility.splitStringCommaSpace(daeactivate)) {
+			for(String name : Strings.splitStringCommaSpace(daeactivate)) {
 				Group.Name group = new Group.Name(name);
 				// Activations take priority over deactivate when set in both attributes
 				if(activate == null || !activate.contains(group)) {
