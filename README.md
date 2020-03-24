@@ -31,7 +31,7 @@ Web resource management in a JSP environment.
 * [Changelog](https://aoindustries.com/ao-web-resources/taglib/changelog)
 * [Taglib Reference](https://aoindustries.com/ao-web-resources/taglib/ao-web-resources.tld/)
 * [API Docs](https://aoindustries.com/ao-web-resources/taglib/apidocs/)
-* [Maven Central Repository](https://search.maven.org/#search%7Cgav%7C1%7Cg:%22com.aoindustries%22%20AND%20a:%22ao-web-resources-taglib%22)
+* [Maven Central Repository](https://search.maven.org/artifact/com.aoindustries/ao-web-resources-taglib)
 * [GitHub](https://github.com/aoindustries/ao-web-resources-taglib)
 
 ## Contact Us
