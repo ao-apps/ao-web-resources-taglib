@@ -79,7 +79,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 			this.activate = null;
 		} else {
 			Set<Group.Name> newActivates = new HashSet<>();
-			for(String name : Strings.splitStringCommaSpace(activate)) {
+			for(String name : Strings.splitCommaSpace(activate)) {
 				Group.Name group = new Group.Name(name);
 				// Activations take priority over deactivate when set in both attributes
 				if(deactivate != null) {
@@ -102,7 +102,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 			this.deactivate = null;
 		} else {
 			Set<Group.Name> newDeactivates = new HashSet<>();
-			for(String name : Strings.splitStringCommaSpace(daeactivate)) {
+			for(String name : Strings.splitCommaSpace(daeactivate)) {
 				Group.Name group = new Group.Name(name);
 				// Activations take priority over deactivate when set in both attributes
 				if(activate == null || !activate.contains(group)) {
