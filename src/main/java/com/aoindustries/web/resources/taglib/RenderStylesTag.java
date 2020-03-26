@@ -148,6 +148,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 		PageContext pageContext = (PageContext)getJspContext();
 		ServletContext servletContext = pageContext.getServletContext();
 		HttpServletRequest httpRequest = (HttpServletRequest)pageContext.getRequest();
+		HttpServletResponse httpResponse = (HttpServletResponse)pageContext.getResponse();
 
 		Map<Group.Name,Boolean> activates;
 		if(activate == null && deactivate == null) {
@@ -169,8 +170,8 @@ public class RenderStylesTag extends SimpleTagSupport {
 		}
 		Renderer.get(servletContext).renderStyles(
 			httpRequest,
-			(HttpServletResponse)pageContext.getResponse(),
-			HtmlEE.get(servletContext, httpRequest, pageContext.getOut()),
+			httpResponse,
+			HtmlEE.get(servletContext, httpRequest, httpResponse, pageContext.getOut()),
 			indent,
 			registered,
 			activates,
