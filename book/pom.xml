@@ -29,7 +29,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 		<relativePath>../../../ao-oss-parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-taglib-book</artifactId><version>0.1.0-SNAPSHOT</version>
+	<groupId>com.aoindustries</groupId><artifactId>ao-web-resources-taglib-book</artifactId><version>0.1.0</version>
 	<packaging>bundle</packaging>
 
 	<properties>
@@ -54,7 +54,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 		<connection>scm:git:git://github.com/aoindustries/ao-web-resources-taglib.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/ao-web-resources-taglib.git</developerConnection>
 		<url>https://github.com/aoindustries/ao-web-resources-taglib</url>
-		<tag>HEAD</tag>
+		<tag>ao-web-resources-taglib-book-0.1.0</tag>
 	</scm>
 
 	<issueManagement>
