@@ -41,8 +41,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 
 		<javadoc.breadcrumbs><![CDATA[<a target="_top" href="https://aoindustries.com/ao-web-resources/">AO Web Resources</a>
 / <a target="_top" href="${project.url}">${shortTitle}</a>]]></javadoc.breadcrumbs>
-		<!-- TODO: ${documented.shortTitle} Book    Here and all -->
-		<shortTitle>Taglib Book</shortTitle>
+		<shortTitle>${documented.shortTitle} Book</shortTitle>
 		<description.html><![CDATA[Documentation for <a target="_top" href="${project.url}">${documented.name}</a> in <a target="_top" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
 	</properties>
 
