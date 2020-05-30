@@ -69,7 +69,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 				<groupId>org.apache.maven.plugins</groupId><artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>unpack-ao-web-resources.tld</id>
+						<id>unpack.tld</id>
 						<phase>prepare-package</phase>
 						<goals>
 							<goal>unpack</goal>
@@ -90,7 +90,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 				<groupId>org.apache.maven.plugins</groupId><artifactId>maven-resources-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>copy-ao-web-resources.tld</id>
+						<id>copy.tld</id>
 						<phase>prepare-package</phase>
 						<goals>
 							<goal>copy-resources</goal>
@@ -110,7 +110,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 					</execution>
 					<!-- Create a second copy in the resource directory used by maven-bundle-plugin -->
 					<execution>
-						<id>copy-ao-web-resources.tld-bundle</id>
+						<id>copy.tld-bundle</id>
 						<phase>prepare-package</phase>
 						<goals>
 							<goal>copy-resources</goal>
