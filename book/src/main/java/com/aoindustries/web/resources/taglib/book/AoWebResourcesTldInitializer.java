@@ -24,7 +24,6 @@ package com.aoindustries.web.resources.taglib.book;
 
 import com.aoindustries.validation.ValidationException;
 import com.semanticcms.tagreference.TagReferenceInitializer;
-import java.util.Collections;
 
 public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 
@@ -38,7 +37,7 @@ public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 			Maven.properties.getProperty("documented.javadoc.link.javase"),
 			Maven.properties.getProperty("documented.javadoc.link.javaee"),
 			// Self
-			Collections.singletonMap("com.aoindustries.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/")
+			"com.aoindustries.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/"
 		);
 	}
 }
