@@ -29,7 +29,7 @@ public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 
 	public AoWebResourcesTldInitializer() throws ValidationException {
 		super(
-			Maven.properties.getProperty("project.name") + " Reference",
+			Maven.properties.getProperty("documented.name") + " Reference",
 			"Taglib Reference",
 			"/ao-web-resources/taglib",
 			"/ao-web-resources.tld",
