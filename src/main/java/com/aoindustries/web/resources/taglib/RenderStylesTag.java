@@ -1,6 +1,6 @@
 /*
  * ao-web-resources-taglib - Web resource management in a JSP environment.
- * Copyright (C) 2020  AO Industries, Inc.
+ * Copyright (C) 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,7 +22,7 @@
  */
 package com.aoindustries.web.resources.taglib;
 
-import com.aoindustries.html.servlet.HtmlEE;
+import com.aoindustries.html.servlet.DocumentEE;
 import com.aoindustries.io.NullWriter;
 import com.aoindustries.lang.Strings;
 import com.aoindustries.web.resources.registry.Group;
@@ -168,10 +168,9 @@ public class RenderStylesTag extends SimpleTagSupport {
 				}
 			}
 		}
-		Renderer.get(servletContext).renderStyles(
-			httpRequest,
+		Renderer.get(servletContext).renderStyles(httpRequest,
 			httpResponse,
-			HtmlEE.get(servletContext, httpRequest, httpResponse, pageContext.getOut()),
+			DocumentEE.get(servletContext, httpRequest, httpResponse, pageContext.getOut()),
 			indent,
 			registered,
 			activates,
