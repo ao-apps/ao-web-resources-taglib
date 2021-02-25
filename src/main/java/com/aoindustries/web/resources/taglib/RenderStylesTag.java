@@ -168,9 +168,16 @@ public class RenderStylesTag extends SimpleTagSupport {
 				}
 			}
 		}
-		Renderer.get(servletContext).renderStyles(httpRequest,
+		Renderer.get(servletContext).renderStyles(
+			httpRequest,
 			httpResponse,
-			DocumentEE.get(servletContext, httpRequest, httpResponse, pageContext.getOut()),
+			DocumentEE.get(
+				servletContext,
+				httpRequest,
+				httpResponse,
+				pageContext.getOut(),
+				false // Do not add extra indentation to JSP
+			),
 			indent,
 			registered,
 			activates,
