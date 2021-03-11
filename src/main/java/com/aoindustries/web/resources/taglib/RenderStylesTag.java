@@ -150,7 +150,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 		HttpServletRequest httpRequest = (HttpServletRequest)pageContext.getRequest();
 		HttpServletResponse httpResponse = (HttpServletResponse)pageContext.getResponse();
 
-		Map<Group.Name,Boolean> activates;
+		Map<Group.Name, Boolean> activates;
 		if(activate == null && deactivate == null) {
 			activates = null;
 		} else {
@@ -171,7 +171,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 		Renderer.get(servletContext).renderStyles(
 			httpRequest,
 			httpResponse,
-			DocumentEE.get(
+			new DocumentEE(
 				servletContext,
 				httpRequest,
 				httpResponse,
