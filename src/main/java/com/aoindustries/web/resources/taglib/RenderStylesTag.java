@@ -179,7 +179,7 @@ public class RenderStylesTag extends SimpleTagSupport {
 				false, // Do not add extra newlines to JSP
 				false  // Do not add extra indentation to JSP
 			),
-			indent,
+			indent, // TODO: unused, remove
 			registered,
 			activates,
 			application ? RegistryEE.Application.get(servletContext)                : null,
