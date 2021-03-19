@@ -43,11 +43,6 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class RenderStylesTag extends SimpleTagSupport {
 
-	private String indent;
-	public void setIndent(String indent) {
-		this.indent = Strings.nullIfEmpty(indent);
-	}
-
 	private boolean application = false;
 	public void setApplication(boolean application) {
 		this.application = application;
@@ -179,7 +174,6 @@ public class RenderStylesTag extends SimpleTagSupport {
 				false, // Do not add extra newlines to JSP
 				false  // Do not add extra indentation to JSP
 			),
-			indent, // TODO: unused, remove
 			registered,
 			activates,
 			application ? RegistryEE.Application.get(servletContext)                : null,

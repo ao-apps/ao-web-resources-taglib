@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-web-resources-taglib - Web resource management in a JSP environment.
-Copyright (C) 2020  AO Industries, Inc.
+Copyright (C) 2020, 2021  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -47,7 +47,7 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 	<!-- TODO: removeScript, removeStyle, removeOrder(ing?) -->
 	<tag>
 		<!-- datePublished="2020-03-03T14:05:05-0600" -->
-		<!-- dateModified="2020-11-23T03:04:27-06:00" -->
+		<!-- dateModified="2021-03-19T01:42:01-05:00" -->
 		<!-- TODO: Add relevant links to this description: -->
 		<description><![CDATA[
 			<p class="semanticcms-tag-reference-summary">
@@ -77,19 +77,6 @@ along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses />
 		<name>renderStyles</name>
 		<tag-class>com.aoindustries.web.resources.taglib.RenderStylesTag</tag-class>
 		<body-content>scriptless</body-content>
-		<attribute>
-			<description><![CDATA[
-				<p>
-					The indentation applied between generated links, after a
-					newline and before the next link.  This identation is
-					not applied before the first link.
-				</p>
-			]]></description>
-			<name>indent</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-			<type>java.lang.String</type>
-		</attribute>
 		<attribute>
 			<description><![CDATA[
 				<p>
