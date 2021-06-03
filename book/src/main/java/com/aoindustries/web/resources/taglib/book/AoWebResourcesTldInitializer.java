@@ -1,6 +1,6 @@
 /*
  * ao-web-resources-taglib - Web resource management in a JSP environment.
- * Copyright (C) 2020  AO Industries, Inc.
+ * Copyright (C) 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -31,7 +31,7 @@ public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 		super(
 			Maven.properties.getProperty("documented.name") + " Reference",
 			"Taglib Reference",
-			"/ao-web-resources/taglib",
+			"/web-resources/taglib",
 			"/ao-web-resources.tld",
 			true,
 			Maven.properties.getProperty("documented.javadoc.link.javase"),
