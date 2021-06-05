@@ -20,24 +20,25 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.web.resources.taglib.book;
+package com.aoapps.web.resources.taglib.book;
 
-import com.aoindustries.validation.ValidationException;
-import com.semanticcms.tagreference.TagReferenceInitializer;
+import com.aoapps.lang.util.PropertiesUtils;
+import java.io.IOException;
+import java.util.Properties;
 
-public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
+/**
+ * @author  AO Industries, Inc.
+ */
+class Maven {
 
-	public AoWebResourcesTldInitializer() throws ValidationException {
-		super(
-			Maven.properties.getProperty("documented.name") + " Reference",
-			"Taglib Reference",
-			"/web-resources/taglib",
-			"/ao-web-resources.tld",
-			true,
-			Maven.properties.getProperty("documented.javadoc.link.javase"),
-			Maven.properties.getProperty("documented.javadoc.link.javaee"),
-			// Self
-			"com.aoindustries.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/"
-		);
+	static final Properties properties;
+	static {
+		try {
+			properties = PropertiesUtils.loadFromResource(Maven.class, "Maven.properties");
+		} catch(IOException e) {
+			throw new ExceptionInInitializerError(e);
+		}
 	}
+
+	private Maven() {}
 }

@@ -1,6 +1,6 @@
 #
 # ao-web-resources-taglib - Web resource management in a JSP environment.
-# Copyright (C) 2020  AO Industries, Inc.
+# Copyright (C) 2020, 2021  AO Industries, Inc.
 #     support@aoindustries.com
 #     7262 Bull Pen Cir
 #     Mobile, AL 36695
@@ -21,4 +21,4 @@
 # along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-com.aoindustries.web.resources.taglib.book.AoWebResourcesTldInitializer
+com.aoapps.web.resources.taglib.book.AoWebResourcesTldInitializer

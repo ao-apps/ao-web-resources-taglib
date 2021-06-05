@@ -20,14 +20,14 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.web.resources.taglib;
+package com.aoapps.web.resources.taglib;
 
-import com.aoindustries.html.servlet.DocumentEE;
-import com.aoindustries.io.NullWriter;
-import com.aoindustries.lang.Strings;
-import com.aoindustries.web.resources.registry.Group;
-import com.aoindustries.web.resources.renderer.Renderer;
-import com.aoindustries.web.resources.servlet.RegistryEE;
+import com.aoapps.html.servlet.DocumentEE;
+import com.aoapps.lang.Strings;
+import com.aoapps.lang.io.NullWriter;
+import com.aoapps.web.resources.registry.Group;
+import com.aoapps.web.resources.renderer.Renderer;
+import com.aoapps.web.resources.servlet.RegistryEE;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;

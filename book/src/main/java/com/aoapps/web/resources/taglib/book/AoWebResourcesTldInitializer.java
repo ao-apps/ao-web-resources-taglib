@@ -1,6 +1,6 @@
 /*
  * ao-web-resources-taglib - Web resource management in a JSP environment.
- * Copyright (C) 2020  AO Industries, Inc.
+ * Copyright (C) 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -20,25 +20,24 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-web-resources-taglib.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.web.resources.taglib.book;
+package com.aoapps.web.resources.taglib.book;
 
-import com.aoindustries.util.PropertiesUtils;
-import java.io.IOException;
-import java.util.Properties;
+import com.aoapps.lang.validation.ValidationException;
+import com.semanticcms.tagreference.TagReferenceInitializer;
 
-/**
- * @author  AO Industries, Inc.
- */
-class Maven {
+public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 
-	static final Properties properties;
-	static {
-		try {
-			properties = PropertiesUtils.loadFromResource(Maven.class, "Maven.properties");
-		} catch(IOException e) {
-			throw new ExceptionInInitializerError(e);
-		}
+	public AoWebResourcesTldInitializer() throws ValidationException {
+		super(
+			Maven.properties.getProperty("documented.name") + " Reference",
+			"Taglib Reference",
+			"/web-resources/taglib",
+			"/ao-web-resources.tld",
+			true,
+			Maven.properties.getProperty("documented.javadoc.link.javase"),
+			Maven.properties.getProperty("documented.javadoc.link.javaee"),
+			// Self
+			"com.aoapps.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/"
+		);
 	}
-
-	private Maven() {}
 }
