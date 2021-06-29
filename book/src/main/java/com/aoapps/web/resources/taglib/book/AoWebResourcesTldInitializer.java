@@ -37,7 +37,7 @@ public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 			Maven.properties.getProperty("documented.javadoc.link.javase"),
 			Maven.properties.getProperty("documented.javadoc.link.javaee"),
 			// Self
-			"com.aoapps.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/"
+			"com.aoapps.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/com.aoapps.web.resources.taglib/"
 		);
 	}
 }
