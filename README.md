@@ -10,6 +10,12 @@
 
 [![Build](https://github.com/aoindustries/ao-web-resources-taglib/workflows/Build/badge.svg?branch=master)](https://github.com/aoindustries/ao-web-resources-taglib/actions?query=workflow%3ABuild)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.aoapps/ao-web-resources-taglib/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.aoapps/ao-web-resources-taglib)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=alert_status)](https://sonarcloud.io/dashboard?branch=master&id=com.aoapps%3Aao-web-resources-taglib)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=ncloc)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-web-resources-taglib&metric=ncloc)  
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=reliability_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-web-resources-taglib&metric=Reliability)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=security_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-web-resources-taglib&metric=Security)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=sqale_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-web-resources-taglib&metric=Maintainability)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=coverage)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-web-resources-taglib&metric=Coverage)
 
 Web resource management in a JSP environment.
 
