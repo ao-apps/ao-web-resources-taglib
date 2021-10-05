@@ -1,4 +1,4 @@
-# [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://github.com/aoindustries) [AO OSS](https://github.com/aoindustries/ao-oss) / [Web Resources](https://github.com/aoindustries/ao-web-resources) / [Taglib](https://github.com/aoindustries/ao-web-resources-taglib)
+# [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://github.com/ao-apps) [AO OSS](https://github.com/ao-apps/ao-oss) / [Web Resources](https://github.com/ao-apps/ao-web-resources) / [Taglib](https://github.com/ao-apps/ao-web-resources-taglib)
 
 [![project: alpha](https://oss.aoapps.com/ao-badges/project-alpha.svg)](https://aoindustries.com/life-cycle#project-alpha)
 [![management: preview](https://oss.aoapps.com/ao-badges/management-preview.svg)](https://aoindustries.com/life-cycle#management-preview)
@@ -8,7 +8,7 @@
 [![semantic versioning: 2.0.0](https://oss.aoapps.com/ao-badges/semver-2.0.0.svg)](http://semver.org/spec/v2.0.0.html)
 [![license: LGPL v3](https://oss.aoapps.com/ao-badges/license-lgpl-3.0.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-[![Build](https://github.com/aoindustries/ao-web-resources-taglib/workflows/Build/badge.svg?branch=master)](https://github.com/aoindustries/ao-web-resources-taglib/actions?query=workflow%3ABuild)
+[![Build](https://github.com/ao-apps/ao-web-resources-taglib/workflows/Build/badge.svg?branch=master)](https://github.com/ao-apps/ao-web-resources-taglib/actions?query=workflow%3ABuild)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.aoapps/ao-web-resources-taglib/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.aoapps/ao-web-resources-taglib)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=alert_status)](https://sonarcloud.io/dashboard?branch=master&id=com.aoapps%3Aao-web-resources-taglib)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-web-resources-taglib&metric=ncloc)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-web-resources-taglib&metric=ncloc)  
@@ -25,7 +25,7 @@ Web resource management in a JSP environment.
 * [Taglib Reference](https://oss.aoapps.com/web-resources/taglib/ao-web-resources.tld/)
 * [API Docs](https://oss.aoapps.com/web-resources/taglib/apidocs/)
 * [Maven Central Repository](https://search.maven.org/artifact/com.aoapps/ao-web-resources-taglib)
-* [GitHub](https://github.com/aoindustries/ao-web-resources-taglib)
+* [GitHub](https://github.com/ao-apps/ao-web-resources-taglib)
 
 ## Contact Us
 For questions or support, please [contact us](https://aoindustries.com/contact):
