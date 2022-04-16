@@ -20,6 +20,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>.
  */
+
 package com.aoapps.web.resources.taglib.book;
 
 import com.aoapps.lang.util.PropertiesUtils;
