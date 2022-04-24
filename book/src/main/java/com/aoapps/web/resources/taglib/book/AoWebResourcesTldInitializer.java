@@ -30,15 +30,15 @@ public class AoWebResourcesTldInitializer extends TagReferenceInitializer {
 
   public AoWebResourcesTldInitializer() throws ValidationException {
     super(
-      Maven.properties.getProperty("documented.name") + " Reference",
-      "Taglib Reference",
-      "/web-resources/taglib",
-      "/ao-web-resources.tld",
-      true,
-      Maven.properties.getProperty("documented.javadoc.link.javase"),
-      Maven.properties.getProperty("documented.javadoc.link.javaee"),
-      // Self
-      "com.aoapps.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/com.aoapps.web.resources.taglib/"
+        Maven.properties.getProperty("documented.name") + " Reference",
+        "Taglib Reference",
+        "/web-resources/taglib",
+        "/ao-web-resources.tld",
+        true,
+        Maven.properties.getProperty("documented.javadoc.link.javase"),
+        Maven.properties.getProperty("documented.javadoc.link.javaee"),
+        // Self
+        "com.aoapps.web.resources.taglib", Maven.properties.getProperty("project.url") + "apidocs/com.aoapps.web.resources.taglib/"
     );
   }
 }

@@ -45,31 +45,37 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 public class RenderStylesTag extends SimpleTagSupport {
 
   private boolean application = false;
+
   public void setApplication(boolean application) {
     this.application = application;
   }
 
   private boolean session = true;
+
   public void setSession(boolean session) {
     this.session = session;
   }
 
   private boolean request = true;
+
   public void setRequest(boolean request) {
     this.request = request;
   }
 
   private boolean page = true;
+
   public void setPage(boolean page) {
     this.page = page;
   }
 
   private boolean registered = true;
+
   public void setRegistered(boolean registered) {
     this.registered = registered;
   }
 
   private Set<Group.Name> activate;
+
   public void setActivate(String activate) {
     if (activate == null) {
       this.activate = null;
@@ -80,8 +86,8 @@ public class RenderStylesTag extends SimpleTagSupport {
         // Activations take priority over deactivate when set in both attributes
         if (deactivate != null) {
           if (
-            deactivate.remove(group)
-            && deactivate.isEmpty()
+              deactivate.remove(group)
+                  && deactivate.isEmpty()
           ) {
             deactivate = null;
           }
@@ -93,6 +99,7 @@ public class RenderStylesTag extends SimpleTagSupport {
   }
 
   private Set<Group.Name> deactivate;
+
   public void setDeactivate(String daeactivate) {
     if (daeactivate == null) {
       this.deactivate = null;
@@ -115,9 +122,9 @@ public class RenderStylesTag extends SimpleTagSupport {
     }
     activate.add(group);
     if (
-      deactivate != null
-      && deactivate.remove(group)
-      && deactivate.isEmpty()
+        deactivate != null
+            && deactivate.remove(group)
+            && deactivate.isEmpty()
     ) {
       deactivate = null;
     }
@@ -129,9 +136,9 @@ public class RenderStylesTag extends SimpleTagSupport {
     }
     deactivate.add(group);
     if (
-      activate != null
-      && activate.remove(group)
-      && activate.isEmpty()
+        activate != null
+            && activate.remove(group)
+            && activate.isEmpty()
     ) {
       activate = null;
     }
@@ -145,10 +152,10 @@ public class RenderStylesTag extends SimpleTagSupport {
       body.invoke(NullWriter.getInstance());
     }
 
-    PageContext pageContext = (PageContext)getJspContext();
+    PageContext pageContext = (PageContext) getJspContext();
     ServletContext servletContext = pageContext.getServletContext();
-    HttpServletRequest httpRequest = (HttpServletRequest)pageContext.getRequest();
-    HttpServletResponse httpResponse = (HttpServletResponse)pageContext.getResponse();
+    HttpServletRequest httpRequest = (HttpServletRequest) pageContext.getRequest();
+    HttpServletResponse httpResponse = (HttpServletResponse) pageContext.getResponse();
 
     Map<Group.Name, Boolean> activates;
     if (activate == null && deactivate == null) {
@@ -169,22 +176,22 @@ public class RenderStylesTag extends SimpleTagSupport {
       }
     }
     Renderer.get(servletContext).renderStyles(
-      httpRequest,
-      httpResponse,
-      new DocumentEE(
-        servletContext,
         httpRequest,
         httpResponse,
-        pageContext.getOut(),
-        false, // Do not add extra newlines to JSP
-        false  // Do not add extra indentation to JSP
-      ),
-      registered,
-      activates,
-      application ? RegistryEE.Application.get(servletContext)                : null,
-      session     ? RegistryEE.Session    .get(httpRequest.getSession(false)) : null,
-      request     ? RegistryEE.Request    .get(servletContext, httpRequest)   : null,
-      page        ? RegistryEE.Page  .get(httpRequest)                   : null
+        new DocumentEE(
+            servletContext,
+            httpRequest,
+            httpResponse,
+            pageContext.getOut(),
+            false, // Do not add extra newlines to JSP
+            false  // Do not add extra indentation to JSP
+        ),
+        registered,
+        activates,
+        application ? RegistryEE.Application.get(servletContext)                : null,
+        session     ? RegistryEE.Session    .get(httpRequest.getSession(false)) : null,
+        request     ? RegistryEE.Request    .get(servletContext, httpRequest)   : null,
+        page        ? RegistryEE.Page  .get(httpRequest)                   : null
     );
   }
 }
