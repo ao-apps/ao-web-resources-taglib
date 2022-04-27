@@ -44,7 +44,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class RenderStylesTag extends SimpleTagSupport {
 
-  private boolean application = false;
+  private boolean application;
 
   public void setApplication(boolean application) {
     this.application = application;
@@ -189,9 +189,9 @@ public class RenderStylesTag extends SimpleTagSupport {
         registered,
         activates,
         application ? RegistryEE.Application.get(servletContext)                : null,
-        session     ? RegistryEE.Session    .get(httpRequest.getSession(false)) : null,
-        request     ? RegistryEE.Request    .get(servletContext, httpRequest)   : null,
-        page        ? RegistryEE.Page  .get(httpRequest)                   : null
+        session     ? RegistryEE.Session.get(httpRequest.getSession(false)) : null,
+        request     ? RegistryEE.Request.get(servletContext, httpRequest)   : null,
+        page        ? RegistryEE.Page.get(httpRequest)                   : null
     );
   }
 }
