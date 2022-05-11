@@ -42,6 +42,9 @@ import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.JspFragment;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
+/**
+ * Renders the <code>&lt;link&gt;</code> tags for the currently active styles.
+ */
 public class RenderStylesTag extends SimpleTagSupport {
 
   private boolean application;
@@ -76,6 +79,9 @@ public class RenderStylesTag extends SimpleTagSupport {
 
   private Set<Group.Name> activate;
 
+  /**
+   * Sets the comma and/or space-separated set of groups to activate.
+   */
   public void setActivate(String activate) {
     if (activate == null) {
       this.activate = null;
@@ -100,6 +106,9 @@ public class RenderStylesTag extends SimpleTagSupport {
 
   private Set<Group.Name> deactivate;
 
+  /**
+   * Sets the comma and/or space-separated set of groups to deactivate.
+   */
   public void setDeactivate(String daeactivate) {
     if (daeactivate == null) {
       this.deactivate = null;
