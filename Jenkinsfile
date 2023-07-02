@@ -28,6 +28,7 @@ def upstreamProjects = [
   '../parent', // <groupId>com.aoapps</groupId><artifactId>ao-oss-parent</artifactId>
 
   // Direct
+  '../fluent-html-any', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId>
   '../fluent-html-servlet', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
   '../lang', // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
   'registry', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId>
