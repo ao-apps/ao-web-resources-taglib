@@ -41,6 +41,12 @@ along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>
     <documented.artifactId>ao-web-resources-taglib</documented.artifactId>
     <documented.name>AO Web Resources Taglib</documented.name>
     <documented.description>Web resource management in a JSP environment.</documented.description>
+    <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://oss.aoapps.com/">AO OSS</a>
+/ <a target="${javadoc.target}" href="https://oss.aoapps.com/web-resources/">Web Resources</a>
+/ <a target="${javadoc.target}" href="${project.url}">Taglib</a>]]></javadoc.breadcrumbs>
+    <javadoc.taglibReference><![CDATA[
+      <li><a target="${javadoc.target}" href="${project.url}ao-web-resources.tld/">Taglib Reference</a></li>
+    ]]></javadoc.taglibReference>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
