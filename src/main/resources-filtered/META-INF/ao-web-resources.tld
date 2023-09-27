@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-web-resources-taglib - Web resource management in a JSP environment.
-Copyright (C) 2020, 2021, 2022  AO Industries, Inc.
+Copyright (C) 2020, 2021, 2022, 2023  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -45,6 +45,178 @@ along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>
   <!-- TODO: script tag (with group, with scope) -->
   <!-- TODO: scripts tag -->
   <!-- TODO: removeScript, removeStyle, removeOrder(ing?) -->
+  <tag>
+    <!-- datePublished="2023-09-26T19:00:16Z" -->
+    <!-- TODO: Add relevant links to this description: -->
+    <description><![CDATA[
+      <p class="semanticcms-tag-reference-summary">
+        Renders the <code>&lt;script&gt;</code> tags for the currently active scripts.
+      </p>
+      <p>
+        All scripts are obtained from all activated groups on all selected
+        registries.
+      </p>
+      <p>
+        The scripts are filtered for the given position.
+      </p>
+      <p>
+        All of the selected scripts are then sorted.  First with a
+        default ordering selected to cover the most common cases of
+        scripts following other scripts.  Second, a stable topological
+        sort is performed to resolve all the ordering constraints.
+      </p>
+      <p>
+        The body is invoked with any output discarded.  This is to allow
+        nested <a href="@{project.url}ao-web-resources.tld/tag-activate">&lt;wr:activate&gt;</a>
+        and <a href="@{project.url}ao-web-resources.tld/tag-deactivate">&lt;wr:deactivate&gt;</a>
+        tags.
+      </p>
+    ]]></description>
+    <name>renderScripts</name>
+    <tag-class>com.aoapps.web.resources.taglib.RenderScriptsTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          Enables the application-scope registry
+          (defaults to <code>false</code>).
+        </p>
+        <p>
+          By default, the application-scope activations and scripts
+          <strong>are not included</strong>.  This is because the
+          application-scope registry is copied to the request, thus
+          without modification during the request, the centrally
+          registered scripts are used.
+        </p>
+      ]]></description>
+      <name>application</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          Enables the session-scope registry, when present
+          (defaults to <code>true</code>).
+        </p>
+        <p>
+          If missing, the session will not be created.
+        </p>
+        <p>
+          Session-scope activations are applied after any selected
+          application-scope.
+        </p>
+      ]]></description>
+      <name>session</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          Enables the request-scope registry
+          (defaults to <code>true</code>).
+        </p>
+        <p>
+          The application-scope registry is copied to the request,
+          thus without modification during the request, the centrally
+          registered scripts and activations are used.
+        </p>
+        <p>
+          Request-scope activations are applied after any selected
+          application-scope and session-scope.
+        </p>
+      ]]></description>
+      <name>request</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          Enables the page-scope registry, when present
+          (defaults to <code>true</code>).
+        </p>
+        <p>
+          Page-scope activations are applied after any selected
+          application-scope, session-scope, and request-scope.
+        </p>
+      ]]></description>
+      <name>page</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          Enables the use of registry activation settings
+          (defaults to <code>true</code>).
+        </p>
+      ]]></description>
+      <name>registered</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          The comma and/or space-separated set of groups to activate.
+          This is in addition to the registry-activated groups when <code>registered="true"</code> (the default).
+        </p>
+        <p>
+          When a group is both activated and deactivate, via these attributes,
+          the activation takes precedence.
+        </p>
+        <p>
+          Nested <a href="@{project.url}ao-web-resources.tld/tag-activate">&lt;wr:activate&gt;</a>
+          and <a href="@{project.url}ao-web-resources.tld/tag-deactivate">&lt;wr:deactivate&gt;</a>
+          tags will further refine the activations.
+        </p>
+      ]]></description>
+      <name>activate</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          The comma and/or space-separated set of groups to deactivate.
+          This is in addition to the registry-deactivated groups when <code>registered="true"</code> (the default).
+        </p>
+        <p>
+          When a group is both activated and deactivate, via these attributes,
+          the activation takes precedence.
+        </p>
+        <p>
+          Nested <a href="@{project.url}ao-web-resources.tld/tag-activate">&lt;wr:activate&gt;</a>
+          and <a href="@{project.url}ao-web-resources.tld/tag-deactivate">&lt;wr:deactivate&gt;</a>
+          tags will further refine the activations.
+        </p>
+      ]]></description>
+      <name>deactivate</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <description><![CDATA[
+        <p>
+          The position of scripts to render: one of <code>HEAD_START</code>, <code>HEAD_END</code>,
+          <code>BODY_START</code>, or <code>BODY_START</code>.
+        </p>
+      ]]></description>
+      <name>position</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
   <tag>
     <!-- datePublished="2020-03-03T14:05:05-06:00" -->
     <!-- dateModified="2021-06-03T22:53:21-05:00" -->
