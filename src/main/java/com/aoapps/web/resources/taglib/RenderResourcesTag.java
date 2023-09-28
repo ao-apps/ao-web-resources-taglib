@@ -88,13 +88,11 @@ abstract class RenderResourcesTag extends SimpleTagSupport {
       for (String name : Strings.splitCommaSpace(activate)) {
         Group.Name group = new Group.Name(name);
         // Activations take priority over deactivate when set in both attributes
-        if (deactivate != null) {
-          if (
-              deactivate.remove(group)
-                  && deactivate.isEmpty()
-          ) {
-            deactivate = null;
-          }
+        if (deactivate != null
+            && deactivate.remove(group)
+            && deactivate.isEmpty()
+        ) {
+          deactivate = null;
         }
         newActivates.add(group);
       }
