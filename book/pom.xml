@@ -29,12 +29,12 @@ along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>
     <relativePath>../../../parent/pom.xml</relativePath>
   </parent>
 
-  <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib-book</artifactId><version>0.6.0</version>
+  <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib-book</artifactId><version>0.6.0-POST-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <properties>
     <!-- Must be set to ${git.commit.time} for snapshots or ISO 8601 timestamp for releases. -->
-    <project.build.outputTimestamp>2024-05-12T00:44:19Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
     <module.name>com.aoapps.web.resources.taglib.book</module.name>
     <subproject.subpath>book/</subproject.subpath>
     <!-- These values are copied from the project being documented -->
@@ -83,7 +83,7 @@ along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>
     <connection>scm:git:git://github.com/ao-apps/ao-web-resources-taglib.git</connection>
     <developerConnection>scm:git:git@github.com:ao-apps/ao-web-resources-taglib.git</developerConnection>
     <url>https://github.com/ao-apps/ao-web-resources-taglib</url>
-    <tag>ao-web-resources-taglib-book-0.6.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
