@@ -162,5 +162,5 @@ abstract class RenderResourcesTag extends SimpleTagSupport {
     );
   }
 
-  protected abstract void doTag(boolean registered, Map<Group.Name, Boolean> activations, Registry ... registries) throws JspException, IOException;
+  protected abstract void doTag(boolean registered, Map<Group.Name, Boolean> activations, Registry... registries) throws JspException, IOException;
 }

@@ -41,7 +41,7 @@ import javax.servlet.jsp.PageContext;
 public class RenderStylesTag extends RenderResourcesTag {
 
   @Override
-  protected void doTag(boolean registered, Map<Group.Name, Boolean> activations, Registry ... registries) throws JspException, IOException {
+  protected void doTag(boolean registered, Map<Group.Name, Boolean> activations, Registry... registries) throws JspException, IOException {
     PageContext pageContext = (PageContext) getJspContext();
     ServletContext servletContext = pageContext.getServletContext();
     HttpServletRequest httpRequest = (HttpServletRequest) pageContext.getRequest();
