@@ -35,11 +35,11 @@ def upstreamProjects = [
 
   // Direct
   '../fluent-html-any', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId>
-  '../fluent-html-servlet', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
+  '../fluent-html-servlet-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
   '../lang', // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
   'registry', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-registry</artifactId>
-  'renderer', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-renderer</artifactId>
-  'servlet', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-servlet</artifactId>
+  'renderer-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-renderer</artifactId>
+  'servlet-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-servlet</artifactId>
   // No Jenkins: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
   // No Jenkins: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId>
 
