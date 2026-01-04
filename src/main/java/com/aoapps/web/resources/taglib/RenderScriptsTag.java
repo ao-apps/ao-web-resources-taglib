@@ -1,6 +1,6 @@
 /*
  * ao-web-resources-taglib - Web resource management in a JSP environment.
- * Copyright (C) 2023  AO Industries, Inc.
+ * Copyright (C) 2023, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -28,14 +28,14 @@ import com.aoapps.web.resources.registry.Group;
 import com.aoapps.web.resources.registry.Registry;
 import com.aoapps.web.resources.registry.Script;
 import com.aoapps.web.resources.renderer.Renderer;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.PageContext;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Map;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.PageContext;
 
 /**
  * Renders the <code>&lt;script&gt;</code> tags for the currently active scripts.
