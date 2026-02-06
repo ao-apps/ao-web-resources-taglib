@@ -149,7 +149,7 @@ along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib</artifactId><version>0.7.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+                  <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib</artifactId><version>0.7.0${POST-SNAPSHOT}</version>
                   <type>jar</type>
                   <includes>META-INF/ao-web-resources.tld</includes>
                 </artifactItem>
@@ -159,7 +159,7 @@ along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>
         </executions>
         <dependencies>
           <dependency>
-            <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib</artifactId><version>0.7.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+            <groupId>com.aoapps</groupId><artifactId>ao-web-resources-taglib</artifactId><version>0.7.0${POST-SNAPSHOT}</version>
             <type>jar</type>
             <exclusions><exclusion><groupId>*</groupId><artifactId>*</artifactId></exclusion></exclusions>
           </dependency>
