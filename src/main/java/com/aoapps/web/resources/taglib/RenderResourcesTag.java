@@ -1,6 +1,6 @@
 /*
  * ao-web-resources-taglib - Web resource management in a JSP environment.
- * Copyright (C) 2020, 2021, 2022, 2023  AO Industries, Inc.
+ * Copyright (C) 2020, 2021, 2022, 2023, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -155,10 +155,10 @@ abstract class RenderResourcesTag extends SimpleTagSupport {
     doTag(
         registered,
         activations,
-        application ? RegistryEE.Application.get(servletContext)            : null,
-        session     ? RegistryEE.Session.get(httpRequest.getSession(false)) : null,
-        request     ? RegistryEE.Request.get(servletContext, httpRequest)   : null,
-        page        ? RegistryEE.Page.get(httpRequest)                      : null
+        application ? RegistryEE.Application.get(servletContext) : null,
+        session ? RegistryEE.Session.get(httpRequest.getSession(false)) : null,
+        request ? RegistryEE.Request.get(servletContext, httpRequest) : null,
+        page ? RegistryEE.Page.get(httpRequest) : null
     );
   }
 
