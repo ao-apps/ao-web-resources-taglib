@@ -155,10 +155,10 @@ abstract class RenderResourcesTag extends SimpleTagSupport {
     doTag(
         registered,
         activations,
-        application ? RegistryEE.Application.get(servletContext)            : null,
-        session     ? RegistryEE.Session.get(httpRequest.getSession(false)) : null,
-        request     ? RegistryEE.Request.get(servletContext, httpRequest)   : null,
-        page        ? RegistryEE.Page.get(httpRequest)                      : null
+        application ? RegistryEE.Application.get(servletContext) : null,
+        session ? RegistryEE.Session.get(httpRequest.getSession(false)) : null,
+        request ? RegistryEE.Request.get(servletContext, httpRequest) : null,
+        page ? RegistryEE.Page.get(httpRequest) : null
     );
   }
 
