@@ -21,7 +21,6 @@
  * along with ao-web-resources-taglib.  If not, see <https://www.gnu.org/licenses/>.
  */
 module com.aoapps.web.resources.taglib {
-  exports com.aoapps.web.resources.taglib;
   // Direct
   requires com.aoapps.html.any; // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId>
   requires com.aoapps.html.servlet; // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
@@ -31,4 +30,6 @@ module com.aoapps.web.resources.taglib {
   requires com.aoapps.web.resources.servlet; // <groupId>com.aoapps</groupId><artifactId>ao-web-resources-servlet</artifactId>
   requires jakarta.servlet; // <groupId>jakarta.servlet</groupId><artifactId>jakarta.servlet-api</artifactId>
   requires jakarta.servlet.jsp; // <groupId>jakarta.servlet.jsp</groupId><artifactId>jakarta.servlet.jsp-api</artifactId>
+
+  exports com.aoapps.web.resources.taglib;
 }
